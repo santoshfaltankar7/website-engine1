@@ -83,18 +83,19 @@ export default function Testimonial1({ content, items, theme, config }) {
   };
 
   return (
-    <div className="bg-background py-12 sm:py-16 lg:py-24">
+    <div className="bg-gray-800 py-12 sm:py-16 lg:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center mb-12">
           {subtitle && (
-            <span className="inline-block text-sm font-medium uppercase tracking-wider text-primary">
+            <span className="inline-block text-sm font-medium uppercase tracking-wider text-gray-300 gray-200">
               {subtitle}
             </span>
           )}
           {title && (
-            <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
-              {title}
-            </h2>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-gray-400 via-gray-100 to-gray-300">
+  {title}
+</h2>
+
           )}
         </div>
 

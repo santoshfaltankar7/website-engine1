@@ -72,21 +72,22 @@ export default function Contact1({ content, items, theme, config }) {
   };
 
   return (
-    <div className="bg-background py-12 sm:py-16 lg:py-24">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div id="contact-section" className="bg-gray-800 py-12 sm:py-16 lg:py-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="mx-auto max-w-2xl text-center mb-12">
           {subtitle && (
-            <span className="inline-block text-sm font-medium uppercase tracking-wider text-primary">
+            <span className="inline-block text-sm font-medium uppercase tracking-wider text-white">
               {subtitle}
             </span>
           )}
           {title && (
-            <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
-              {title}
-            </h2>
+            <h2 className="mt-2 text-3xl sm:text-4xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-gray-500 via-gray-200 to-gray-400">
+  {title}
+</h2>
+
           )}
           {description && (
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="mt-4 text-gray-100 ">
               {description}
             </p>
           )}
@@ -96,19 +97,19 @@ export default function Contact1({ content, items, theme, config }) {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-xl font-semibold">Contact Information</h3>
+              <h3 className="text-gray-100 font-semibold">Contact Information</h3>
               <div className="mt-6 space-y-4">
                 {email && (
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 flex h-10 w-10 items-center justify-center rounded-md bg-primary/10 text-primary">
+                    <div className="flex-shrink-0 flex h-10 w-10 items-center justify-center rounded-md bg-gradient-to-tr from-pink-500 via-red-400 to-yellow-400 text-white shadow-md">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <rect width="20" height="16" x="2" y="4" rx="2" />
                         <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                       </svg>
                     </div>
                     <div className="ml-4">
-                      <p className="text-sm font-medium">Email</p>
-                      <a href={`mailto:${email}`} className="text-muted-foreground hover:text-primary">
+                      <p className="text-gray-100 font-medium">Email</p>
+                      <a href={`mailto:${email}`} className="text-muted-foreground hover:text-green-700">
                         {email}
                       </a>
                     </div>
@@ -117,14 +118,14 @@ export default function Contact1({ content, items, theme, config }) {
 
                 {phone && (
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 flex h-10 w-10 items-center justify-center rounded-md bg-primary/10 text-primary">
+                    <div className="flex-shrink-0 flex h-10 w-10 items-center justify-center rounded-md bg-gradient-to-tr from-pink-500 via-red-400 to-yellow-400 text-white shadow-md">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                       </svg>
                     </div>
                     <div className="ml-4">
-                      <p className="text-sm font-medium">Phone</p>
-                      <a href={`tel:${phone.replace(/\s+/g, '')}`} className="text-muted-foreground hover:text-primary">
+                      <p className="text-gray-100 font-medium">Phone</p>
+                      <a href={`tel:${phone.replace(/\s+/g, '')}`} className="text-muted-foreground hover:text-green-700">
                         {phone}
                       </a>
                     </div>
@@ -133,14 +134,14 @@ export default function Contact1({ content, items, theme, config }) {
 
                 {address && (
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 flex h-10 w-10 items-center justify-center rounded-md bg-primary/10 text-primary">
+                    <div className="flex-shrink-0 flex h-10 w-10 items-center justify-center rounded-md bg-gradient-to-tr from-pink-500 via-red-400 to-yellow-400 text-white shadow-md ">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
                         <circle cx="12" cy="10" r="3" />
                       </svg>
                     </div>
                     <div className="ml-4">
-                      <p className="text-sm font-medium">Address</p>
+                      <p className="text-gray-100 font-medium">Address</p>
                       <p className="text-muted-foreground">
                         {address}
                       </p>
@@ -161,7 +162,7 @@ export default function Contact1({ content, items, theme, config }) {
           </div>
 
           {/* Contact Form */}
-          <div className="rounded-lg border bg-card p-6 shadow-sm">
+          <div className="rounded-lg border bg-gray-100 p-6 shadow-sm">
             {form_title && (
               <h3 className="text-xl font-semibold">{form_title}</h3>
             )}
@@ -181,7 +182,7 @@ export default function Contact1({ content, items, theme, config }) {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="mt-1 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus:border-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+                  className="mt-1 w-full rounded-md border border-input bg-gray-200 px-3 py-2 text-sm ring-offset-background focus:border-black focus:outline-none "
                 />
               </div>
 
@@ -196,7 +197,7 @@ export default function Contact1({ content, items, theme, config }) {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="mt-1 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus:border-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+                  className="mt-1 w-full rounded-md border border-input bg-gray-200 px-3 py-2 text-sm ring-offset-background focus:border-black focus:outline-none "
                 />
               </div>
 
@@ -211,7 +212,7 @@ export default function Contact1({ content, items, theme, config }) {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="mt-1 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus:border-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+                  className="mt-1 w-full rounded-md border border-input bg-gray-200 px-3 py-2 text-sm ring-offset-background focus:border-black focus:outline-none "
                 />
               </div>
 
@@ -226,7 +227,7 @@ export default function Contact1({ content, items, theme, config }) {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  className="mt-1 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus:border-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+                  className="mt-1 w-full rounded-md border border-input bg-gray-200 px-3 py-2 text-sm ring-offset-background focus:border-black focus:outline-none "
                 ></textarea>
               </div>
 
@@ -234,7 +235,7 @@ export default function Contact1({ content, items, theme, config }) {
                 <Button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className="w-full"
+                  className="w-full bg-green-500 hover:border-2 hover:border-green-400 hover:bg-white hover:text-black"
                 >
                   {isSubmitting ? 'Sending...' : submit_text}
                 </Button>

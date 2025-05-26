@@ -59,7 +59,7 @@ export default function Footer2({ content, items, theme, config }) {
   };
 
   return (
-    <footer className="bg-muted/30 border-t">
+    <footer className="bg-gray-500 border-t">
       <div className="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center">
           {/* Logo */}

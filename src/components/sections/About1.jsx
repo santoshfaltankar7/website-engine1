@@ -15,58 +15,66 @@ export default function About1({ content, items, theme, config }) {
     : [
         {
           id: '1',
-          title: 'Jane Smith',
-          subtitle: 'CEO & Founder',
-          description: 'Jane has over 15 years of experience in web development and digital marketing.',
-          image_url: '/placeholder-avatar.jpg',
+          title: 'Rahul Desai',
+          subtitle: 'Founder & Lead Barber',
+          description:
+            'With 15+ years of experience, Rahul is known for precision cuts, tailored beard styling, and luxury grooming experiences.',
+          image_url: 'https://images.unsplash.com/photo-1595152452543-e5fc28ebc2b8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWVuJTIwZmFjZXxlbnwwfHwwfHx8MA%3D%3D',
         },
         {
           id: '2',
-          title: 'John Davis',
-          subtitle: 'Lead Developer',
-          description: 'John specializes in front-end development and creating beautiful user interfaces.',
-          image_url: '/placeholder-avatar.jpg',
+          title: 'Amit Kapoor',
+          subtitle: 'Senior Hair Stylist',
+          description:
+            'Amit crafts stylish haircuts suited to face shape and lifestyle. He stays updated with the latest men’s trends and fades.',
+          image_url: 'https://images.unsplash.com/photo-1624395213081-608f51284ddd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bWVuJTIwZmFjZXxlbnwwfHwwfHx8MA%3D%3D',
         },
         {
           id: '3',
-          title: 'Sarah Johnson',
-          subtitle: 'Design Director',
-          description: 'Sarah is an award-winning designer with a passion for creating memorable brands.',
-          image_url: '/placeholder-avatar.jpg',
+          title: 'Karan Malhotra',
+          subtitle: 'Beard Specialist',
+          description:
+            'Karan helps clients maintain sharp, well-shaped beards with clean lines and the perfect fade-to-beard transition.',
+          image_url: 'https://images.unsplash.com/photo-1547558345-af5db4fe45ec?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fG1lbiUyMGZhY2V8ZW58MHx8MHx8fDA%3D',
         },
         {
           id: '4',
-          title: 'Michael Wilson',
-          subtitle: 'Marketing Specialist',
-          description: 'Michael has helped numerous businesses grow their online presence and reach new customers.',
-          image_url: '/placeholder-avatar.jpg',
+          title: 'Sameer Rathore',
+          subtitle: 'Facial & Skincare Expert',
+          description:
+            'Sameer provides rejuvenating facials, charcoal treatments, and skincare routines tailored for men’s skin types.',
+          image_url: 'https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWVuJTIwZmFjZXxlbnwwfHwwfHx8MA%3D%3D',
         },
       ];
 
   return (
-    <div className="py-12 sm:py-16 lg:py-24 bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* About section */}
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center mb-16">
-          <div className="flex flex-col space-y-6 order-2 lg:order-1">
-            {subtitle && (
-              <span className="inline-block text-sm font-medium uppercase tracking-wider text-primary">
-                {subtitle}
-              </span>
-            )}
-            {title && (
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                {title}
-              </h2>
-            )}
-            {description && (
-              <div className="prose max-w-none text-muted-foreground">
-                <p>{description}</p>
-              </div>
-            )}
-          </div>
+   <div id="about-section" className="py-12 sm:py-16 lg:py-24 bg-gray-800 shadow-inner">
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    {/* About section */}
+    <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center mb-20">
+          {/* Text Content */}
+        <div className="flex flex-col space-y-6 order-2 lg:order-1 text-left">
+        {subtitle && (
+          <span className="text-sm font-semibold uppercase tracking-widest text-gray-50">
+            {subtitle}
+          </span>
+        )}
+        {title && (
+          <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white drop-shadow-lg">
+            {title}
+          </h2>
+        )}
+        {description && (
+          <p className="text-gray-300 leading-relaxed text-lg max-w-2xl">
+            {description}
+          </p>
+        )}
+      </div>
+
+
+          {/* Image Section */}
           {image_url && (
-            <div className="relative mx-auto aspect-video w-full max-w-lg overflow-hidden rounded-lg lg:order-2">
+            <div className="relative w-full max-w-xl mx-auto aspect-video overflow-hidden rounded-xl shadow-lg order-1 lg:order-2">
               <Image
                 src={image_url}
                 alt={title || 'About us'}
@@ -80,50 +88,44 @@ export default function About1({ content, items, theme, config }) {
 
         {/* Team section */}
         {team.length > 0 && (
-          <div className="mt-16">
-            <div className="mx-auto max-w-2xl text-center mb-12">
-              <h3 className="text-2xl font-bold tracking-tight sm:text-3xl">
-                Our Team
-              </h3>
-              <p className="mt-4 text-lg text-muted-foreground">
-                Meet the talented individuals who make our company great.
-              </p>
-            </div>
+          <div className="bg-gray-500 py-20 px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-7xl">
+              {/* Section Header */}
+              <div className="mx-auto max-w-2xl text-center mb-12">
+                <h3 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white bg-gradient-to-r from-red-400 via-red-600 to-red-800 bg-clip-text text-transparent animate-pulse drop-shadow-lg">
+  Our Team
+</h3>
+<p className="mt-4 text-lg text-gray-200 max-w-xl mx-auto leading-relaxed sm:text-xl">
+  Meet the talented individuals who make our company great.
+</p>
 
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-              {team.map((member) => (
-                <div
-                  key={member.id}
-                  className="flex flex-col items-center text-center"
-                >
-                  {member.image_url && (
-                    <div className="relative h-40 w-40 overflow-hidden rounded-full mb-4">
-                      <Image
-                        src={member.image_url}
-                        alt={member.title || 'Team member'}
-                        width={160}
-                        height={160}
-                        className="h-full w-full object-cover"
-                      />
-                    </div>
-                  )}
-                  {member.title && (
-                    <h4 className="text-xl font-semibold">{member.title}</h4>
-                  )}
-                  {member.subtitle && (
-                    <p className="text-sm text-primary">{member.subtitle}</p>
-                  )}
-                  {member.description && (
-                    <p className="mt-2 text-muted-foreground">
-                      {member.description}
-                    </p>
-                  )}
-                </div>
-              ))}
+              </div>
+
+              {/* Team Grid */}
+             <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+  {team.map((member) => (
+    <div
+      key={member.id}
+      className="text-center p-4 rounded-xl transition duration-300 transform hover:scale-105 hover:shadow-xl hover:bg-gray-700"
+    >
+      <Image
+        src={member.image_url}
+        alt={member.title}
+        width={300}
+        height={300}
+        className="mx-auto rounded-full object-cover transition duration-300 hover:brightness-90"
+      />
+      <h4 className="mt-4 text-lg font-semibold text-white">{member.title}</h4>
+      <p className="text-red-300">{member.subtitle}</p>
+      <p className="mt-2 text-sm text-gray-100">{member.description}</p>
+    </div>
+  ))}
+</div>
+
             </div>
           </div>
         )}
       </div>
     </div>
   );
-} 
+}

@@ -63,7 +63,7 @@ export default function Footer1({ content, items, theme, config }) {
   }[columns] || 'md:grid-cols-3';
 
   return (
-    <footer className="bg-muted/30 border-t">
+    <footer className="bg-gray-400 rounded-2xl p-6 border-t ">
       <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-4">
           {/* Company info column */}
@@ -85,7 +85,7 @@ export default function Footer1({ content, items, theme, config }) {
                 </Link>
               )}
               {description && (
-                <p className="text-muted-foreground">
+                <p className="text-black">
                   {description}
                 </p>
               )}
@@ -102,7 +102,7 @@ export default function Footer1({ content, items, theme, config }) {
                     <li key={index}>
                       <Link
                         href={link.cta_link || '#'}
-                        className="text-muted-foreground hover:text-primary transition-colors"
+                        className="text-muted-foreground hover:text-black transition-colors"
                       >
                         {link.title}
                       </Link>

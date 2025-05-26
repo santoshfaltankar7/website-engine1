@@ -1,5 +1,5 @@
 "use client";
-
+import Image from 'next/image';
 import React, { useState } from "react";
 import Link from "next/link";
 import { Phone, MapPin, Menu, X } from "lucide-react";
@@ -29,14 +29,17 @@ export default function Header1({ content, items = [], theme, config }) {
     ));
 
   return (
-    <header className="fixed w-full bg-background/80 backdrop-blur-md z-50 border-b">
+    <header className="fixed w-full bg-gradient-to-br from-gray-300 via-gray-300 to-gray-300 shadow-inne backdrop-blur-md z-50 border-b">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-        <Link
-          href="/"
-          className="font-bold text-xl md:text-2xl hover:text-primary transition-colors duration-300"
-        >
-          {title}
-        </Link>
+
+       <div className="flex gap-3">
+  
+
+        <Link href="/" className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 font-bold text-xl md:text-2xl transition-colors duration-300 hover:opacity-80">
+  {title}
+</Link>
+
+       </div>
 
         <div className="flex items-center gap-2 md:hidden">
           <ThemeToggle />
